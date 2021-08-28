@@ -8,7 +8,7 @@ class FizzBuzz
     {
     }
 
-    public function FizzBuzzOneHundred()
+    public function FizzBuzzOneHundred() : string
     {
         for ($i = 1; $i <= 100; $i++) {
             if (($i % 3 == 0) and ($i % 5 == 0)) {
@@ -23,7 +23,7 @@ class FizzBuzz
         }
     }
 
-    public function getFizzBuzzForOneNumber($number) {
+    public function getFizzBuzzForOneNumber(int $number) : string {
         if (($number % 3 == 0) and ($number % 5 == 0)) {
             return "Fizz Buzz";
         } else if ($number % 3 == 0) {
@@ -31,7 +31,7 @@ class FizzBuzz
         } else if ($number % 5 == 0) {
             return "Buzz";
         } else {
-            return $number;
+            return strval($number);
         }
     }
 }
